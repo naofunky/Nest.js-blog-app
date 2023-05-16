@@ -10,9 +10,13 @@ export class PostsService {
   }
 
   createPost(post: PostType) {
-    // const copyPost = [...this.posts];
-    // console.log(copyPost);
-    // copyPost.push(post);
-    this.posts.push(post);
+    const copyPost = [...this.posts];
+    console.log(copyPost);
+    copyPost.push(post);
+    // this.posts.push(post);
+  }
+
+  findById(id: string): PostType {
+    return this.posts.find((post) => post.id === id);
   }
 }
