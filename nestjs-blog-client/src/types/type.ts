@@ -9,3 +9,7 @@ export type PostType = {
 export type PostProps = {
   posts: PostType[];
 };
+
+export type SecondPostProps = {
+  post: PostType;
+};

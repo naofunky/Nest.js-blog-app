@@ -11,13 +11,13 @@ export class PostsController {
     return this.postsService.findAll();
   }
 
-  @Post()
-  createPost(@Body() post: PostType): void {
-    return this.postsService.createPost(post);
-  }
-
   @Get(':id')
   findById(@Param('id') id: string): PostType {
     return this.postsService.findById(id);
+  }
+
+  @Post()
+  createPost(@Body() post: PostType): void {
+    return this.postsService.createPost(post);
   }
 }
